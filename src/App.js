@@ -1,13 +1,20 @@
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p className="text-purple-800 text-4xl p-12 font-bold">It works!</p>
-      </header>
-    </div>
-  );
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
+
+import InputComponent from './InputComponent';
+import OutputComponent from './OutputComponent';
+
+function App () {
+	return (
+		<div className="App">
+			<HeaderComponent />
+			<InputComponent />
+			<OutputComponent />
+			<FooterComponent />
+		</div>
+	);
 }
 
 export default App;
