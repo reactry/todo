@@ -1,18 +1,18 @@
 
-
+import TodoItem from './TodoItem';
 
 function OutputComponent ({todos}) {
 	let todoItems = todos.map((todo, index) => {
 		return (
-			<div className="bg-slate-600 text-white py-4 px-6 m-4" key={index}>
-				<h4 className="text-xl">{todo}</h4>
-			</div>
+			<TodoItem key={index} todo={todo} />
 		);
 	});
 
 	return (
 		<div className="OutputComponent p-12 min-h-screen">
-			<h2 className="text-2xl">List of todos</h2>
+			<h2 className="text-2xl">
+				{todos.length > 0 ? "List of todos" : "No todos added"}
+			</h2>
 			<div className="">
 				{todoItems}
 			</div>
