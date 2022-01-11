@@ -13,7 +13,10 @@ function InputComponent ({todos, setTodos}) {
 		e.preventDefault();
 		let text = todoText.trim();
 		if (text) {
-			setTodos([text, ...todos]);
+			setTodos([{
+				text: text,
+				date: new Date()
+			}, ...todos]);
 			setTodoText("");
 		}
 		console.log("Added todo: " + todoText);
